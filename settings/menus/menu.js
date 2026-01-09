@@ -1,182 +1,77 @@
-const menu = (prefix, tempo, pushname, hora, NomeDoBot) => {
-  
-// NÃO APAGUE ESSE ${NickDono} nem 
-//${numerodn} nem ${NomeDoBot} nem ${prefix} só se quiser apagar completo, não coloque nada ${dentro assim} ISSO SÃO DEFINIÇÕES QUE ESTÁ PUXANDO DO settings.json, da pasta dono, só pode altera a base de tudo, menos as definições, só se quiser apagar a definição completa.  
-  
-return `
- ╭═•❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪•═╮
-┏│ ✫✫✫✫✫
-┃│Oiê @${pushname}
-┃│${tempo} ฅ^•ﻌ•^ฅ
-┃│ʜᴏʀᴀ: ${hora}
-┃│ᴅᴏɴᴏ: ${NickDono}
-┃│ʙᴏᴛ: ${NomeDoBot}
-┗│ ✫✫✫✫✫
-╰═•❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪•═╯
-‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎╎   ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ 
-╭═• ೋ✧๑🍾๑✧ೋ •═╮       
-╎ 🥂×>𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋<×🥂
-╰═• ೋ✧๑🍾๑✧ೋ •═╯  
-╎✰ۣۜۜ͜͡🍭 ${prefix}figurinhas
-╎✰ۣۜۜ͜͡🍭 ${prefix}menuplay
-╎✰ۣۜۜ͜͡🍭 ${prefix}menuvip
-╎✰ۣۜۜ͜͡🍭 ${prefix}listavip
-╎✰ۣۜۜ͜͡🍭 ${prefix}menulogos
-╎✰ۣۜۜ͜͡🍭 ${prefix}menuadm
-╎✰ۣۜۜ͜͡🍭 ${prefix}menulider
-╎✰ۣۜۜ͜͡🍭 ${prefix}infomestre 
-╰═• ೋ✧๑🩸๑✧ೋ •═╯
-╎
-╎  ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ
-╭═• ೋ⚘๑❤️‍🔥๑⚘ೋ •═╮ 
-╎     ☀️×>𝐌𝐎𝐃𝐒<×☀️
-╰═• ೋ⚘๑❤️‍🔥๑⚘ೋ •═╯
-╎⚘ۣۜۜ͜͡✨ ${prefix}viraraudio "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}videolento "Marcar"
-╎⚘ۜۜ͜͡✨ ${prefix}videorapido "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Videocontrario "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Audiolento "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Audiorapido "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Grave "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Grave2 "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}robot "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Esquilo "Marcar"
-╎⚘ۣۣۜۜۜۜ͜͜͡͡✨ ${prefix}Estourar "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}estourar2 "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Bass "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Bass2 "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Bass3 "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}Vozmenino "Marcar"     
-╎⚘ۣۜۜ͜͡✨ ${prefix}tupai "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}reverse "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}fat "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}deep "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}earrape "Marcar"
-╎⚘ۣۜۜ͜͡✨ ${prefix}falar pt "txt"
-╎⚘ۣۜۜ͜͡✨ ${prefix}faustao "txt"
-╎⚘ۣۜۜ͜͡✨ ${prefix}chapolin "txt"
-╎⚘ۣۜۜ͜͡✨ ${prefix}scheyot "txt"
-╎⚘ۣۜۜ͜͡✨ ${prefix}eminem "txt"
-╎⚘ۣۜۜ͜͡✨ ${prefix}negobam "txt"
-╎⚘♬○♩●✧♩⚘♬●♩✧●♪○♬⚘                          
-╰═• ೋ✧๑💧๑✧ೋ •═╯
-╎
-╎  ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ
-╭═• ೋ❃๑❤️‍🔥๑❃ೋ •═╮ 
-╎   ⛈️×>𝐄𝐅𝐄𝐈𝐓𝐎𝐒<×⛈️
-╰═• ೋ❃๑❤️‍🔥๑❃ೋ •═╯
-╎❃ۣۜۜ͜͡🧩 ${prefix}Legenda "marcar"       
-╎❃ۣۜۜ͜͡🧩 ${prefix}Procurado "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Hitler "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Preso "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Lixo "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Deletef "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Morto "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Lgbt "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}Merda "marcar"     
-╎❃ۣۜۜ͜͡🧩 ${prefix}borrar "marcar" 
-╎❃ۣۜۜ͜͡🧩 ${prefix}noturno "marcar
-╎❃ۣۜۜ͜͡🧩 ${prefix}wasted "marcar"
-╎❃ۣۜۜ͜͡🧩 ${prefix}trigger "marcar
-╰═• ೋ✧๑🩸๑✧ೋ •═╯
-╎
-╎  ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ          
-╭═• ೋ✘๑❤️‍🔥๑✘ೋ •═╮              
-╎    🪩×>𝐆𝐀𝐌𝐄𝐒<×🪩
-╰═• ೋ✘๑❤️‍🔥๑✘ೋ •═╯
-╎✘ۣۜۜ͜͡🌎 ${prefix}akinator
-╎✘ۣۜۜ͜͡🌎 ${prefix}eununca
-╎✘ۣۜۜ͜͡🌎 ${prefix}forca
-╎✘ۣۜۜ͜͡🌎 ${prefix}jogodavelha
-╎✘ۣۜۜ͜͡🌎 ${prefix}ppt
-╎✘ۣۜۜ͜͡🌎 ${prefix}ttt
-╎✘ۣۜۜ͜͡🌎 ${prefix}jogar
-╎✘ۣۜۜ͜͡🌎 ${prefix}quizanimais
-╎✘ۣۜۜ͜͡🌎 ${prefix}cassino
-╎✘ۣۜۜ͜͡🌎 ${prefix}anagrama
-╎✘ۣۜۜ͜͡🌎 ${prefix}linda (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}lindo (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}gostosa (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}gostoso (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Gay (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Feio (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Corno (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Vesgo (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Bebado (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Beijo (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Matar (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Tapa (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Chute (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}golpista (@) 
-╎✘ۣۜۜ͜͡🌎 ${prefix}Nazista (@)
-╎✘ۣۜۜ͜͡🌎 ${prefix}Chance (fale algo) 
-╎✘ۣۜۜ͜͡🌎 ${prefix}Casal   
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankgay     
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankgado
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankcorno  
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankgostoso
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankgostosa
-╎✘ۣۜۜ͜͡🌎 ${prefix}Ranknazista
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankotakus
-╎✘ۣۜۜ͜͡🌎 ${prefix}Rankpau
-╎✘ۣۜۜ͜͡🌎 ${prefix}pornhub "txt/txt"
-╎✘ۣۜۜ͜͡🌎 ${prefix}googlesg "txt/txt/"
-╎✘ۣۜۜ͜͡🌎 ${prefix}bolsonaro "txt"
-╰═• ೋ✧๑💧๑✧ೋ •═╯
-╎
-╎  ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ ᶫᵒᵛᵉᵧₒᵤ
-╭═• ೋ✧๑❤️‍🔥๑✧ೋ •═╮       
-╎🥎∆𝗜𝗡𝗧𝗘𝗥𝗔𝗖𝗢𝗘𝗦∆🥎
-╰═• ೋ✧๑❤️‍🔥๑✧ೋ •═╯      
-╎✰ۣۜۜ͜͡🎠 ${prefix}perfil  
-╎✰ۣۜۜ͜͡🎠 ${prefix}fixapessoal
-╎✰ۣۜۜ͜͡🎠 ${prefix}nick 
-╎✰ۣۜۜ͜͡🎠 ${prefix}appsvip
-╎✰ۣۜۜ͜͡🎠 ${prefix}netflix
-╎✰ۣۜۜ͜͡🎠 ${prefix}level
-╎✰ۣۜۜ͜͡🎠 ${prefix}Atividade
-╎✰ۣۜۜ͜͡🎠 ${prefix}tempo
-╎✰ۣۜۜ͜͡🎠 ${prefix}status
-╎✰ۣۜۜ͜͡🎠 ${prefix}Rankativos
-╎✰ۣۜۜ͜͡🎠 ${prefix}Rankanativos
-╎✰ۣۜۜ͜͡🎠 ${prefix}Conselho
-╎✰ۣۜۜ͜͡🎠 ${prefix}check "@"
-╎✰ۣۜۜ͜͡🎠 ${prefix}listapalavrao
-╎✰ۣۜۜ͜͡🎠 ${prefix}atividade "@"
-╎✰ۣۜۜ͜͡🎠 ${prefix}Ranklevel
-╎✰ۣۜۜ͜͡🎠 ${prefix}admins
-╎✰ۣۜۜ͜͡🎠 ${prefix}bug
-╎✰ۣۜۜ͜͡🎠 ${prefix}avalie
-╎✰ۣۜۜ͜͡🎠 ${prefix}sugestão 
-╎✰ۣۜۜ͜͡🎠 ${prefix}convite
-╎✰ۣۜۜ͜͡🎠 ${prefix}listavip
-╎✰ۣۜۜ͜͡🎠 ${prefix}lideres
-╎✰ۣۜۜ͜͡🎠 ${prefix}rafa "Pergunte"
-╎✰ۣۜۜ͜͡🎠 ${prefix}sakura "fale algo"
-╎✰ۣۜۜ͜͡🎠 ${prefix}tempo "Sao paulo"
-╎✰ۣۜۜ͜͡🎠 ${prefix}marqueme
-╎✰ۣۜۜ͜͡🎠 ${prefix}correio "Nmr"/MSG
-╎✰ۣۜۜ͜͡🎠 ${prefix}falar PT "TEXTO"
-╎✰ۣۜۜ͜͡🎠 ${prefix}traduzir "DOG"
-╎✰ۣۜۜ͜͡🎠 ${prefix}Emoji2 "🥺+🥵"
-╎✰ۣۜۜ͜͡🎠 ${prefix}semoji "😈"
-╎✰ۣۜۜ͜͡🎠 ${prefix}repetir "🗿"
-╎✰ۣۜۜ͜͡🎠 ${prefix}playstore "Um app"
-╎✰ۣۜۜ͜͡🎠 ${prefix}print "www."
-╎✰ۣۜۜ͜͡🎠 ${prefix}Tabela 
-╎✰ۣۜۜ͜͡🎠 ${prefix}celular "redmi 11S"
-╎✰ۣۜۜ͜͡🎠 ${prefix}sn "Pergunta"
-╎✰ۣۜۜ͜͡🎠 ${prefix}Frases 
-╎✰ۣۜۜ͜͡🎠 ${prefix}Calcular "2+2"
-╎✰ۣۜۜ͜͡🎠 ${prefix}Bot 
-╎✰ۣۜۜ͜͡🎠 ${prefix}dono
-╎✰ۣۜۜ͜͡🎠 ${prefix}criador
-╎✰ۣۜۜ͜͡🎠 ${prefix}alugar
-╎✰ۣۜۜ͜͡🎠 ${prefix}pix 
-╰═• ೋ✧๑🩸๑✧ೋ •═╯`
+const config = require("../config.json");
+
+// 🎄 Função para gerar data/hora formatada
+function getCurrentDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString("pt-BR");
+    const time = now.toLocaleTimeString("pt-BR");
+    return { date, time };
 }
 
-exports.menu = menu
+// 🎅 MENU DE NATAL — ${config.NomeDoBot}
+function generateMenu() {
+    const { date, time } = getCurrentDateTime();
 
-// NÃO APAGUE ESSE ${NickDono} nem 
-//${numerodn} nem ${NomeDoBot} nem ${prefix} só se quiser apagar completo, não coloque nada ${dentro assim} ISSO SÃO DEFINIÇÕES QUE ESTÁ PUXANDO DO settings.json, da pasta dono, só pode altera a base de tudo, menos as definições, só se quiser apagar a definição completa.
+    return `
+🎄✨🎅 𝑭𝑬𝑳𝑰𝑵𝑨𝑳 𝑵𝑨𝑻𝑨𝑳 🎅✨🎄
+╔═══❄️∘◦🎄◦∘❄️═══╗
+       *${config.NomeDoBot}*
+╚═══❄️∘◦🎄◦∘❄️═══╝
+
+🗓️ _${date}_
+🕰️ _${time}_
+👑 _Dono: ${config.NickDono}_
+
+┏━━━🎁⌬🎁━━━┓
+┃     *🎅 MENU DE NATAL 🎅*
+┣━━「 🎄 *PRINCIPAL* 」 
+┃ 🎁 ${config.prefix}menuadm
+┃ 🎄 ${config.prefix}brincadeiras
+┃ 🎅 ${config.prefix}menulogos
+
+┣━━「 🔔 *SISTEMA* 」
+┃ 🎄 ${config.prefix}ping
+┃ 🎁 ${config.prefix}status
+┃ 🎄 ${config.prefix}stats
+┃ 🎅 ${config.prefix}roubar
+┃ 🎄 ${config.prefix}revelar
+┃ 🎁 ${config.prefix}sticker
+┃ 🎅 ${config.prefix}toimg
+
+┣━━「 🎶 *CONVERSÃO MÁGICA* 」
+┃ 🎄 ${config.prefix}totext
+┃ 🎅 ${config.prefix}ptvmsg
+┃ 🎁 ${config.prefix}attp
+┃ 🎄 ${config.prefix}ttp
+┃ 🎁 ${config.prefix}gerarlink
+┃ 🎅 ${config.prefix}rvisu
+
+┣━━「 📥 *DOWNLOADS FESTIVOS* 」
+┃ 🎄 ${config.prefix}tomp3
+┃ 🎅 ${config.prefix}shazam
+┃ 🎁 ${config.prefix}play
+┃ 🎁 ${config.prefix}play2
+┃ 🎁 ${config.prefix}play3
+┃ 🎄 ${config.prefix}sc
+┃ 🎅 ${config.prefix}ttk
+┃ 🎁 ${config.prefix}ttk2
+┃ 🎄 ${config.prefix}tiktok
+┃ 🎁 ${config.prefix}tiktok2
+┃ 🎅 ${config.prefix}kwai
+┃ 🎄 ${config.prefix}instamp4
+┃ 🎅 ${config.prefix}instamp3
+┃ 🎁 ${config.prefix}Pintemp4
+┃ 🎄 ${config.prefix}Pintemp3
+┃ 🎅 ${config.prefix}Pinterest
+┃ 🎁 ${config.prefix}Pinterest2
+
+┣━━「 👤 *PERFIL DE NATAL* 」
+┃ 🎄 ${config.prefix}perfil
+
+┗━━━🎅⌬🎅━━━┛
+
+✨ Que a magia do Natal ilumine cada comando seu! 🎁
+`;
+}
+
+module.exports = generateMenu;
