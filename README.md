@@ -1,8 +1,8 @@
-<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=00008b&center=falso&vCenter=falso&lines=🜛+𝐓𝐄𝐃-𝐁𝐎𝐓-𝐕4.5+🜛;۞+𝙊𝙁𝘾+𝙐𝙋𝘿𝘼𝙏𝙀+۞;@𝙏𝙚𝙙𝙯𝙞𝙣𝙝𝙤">      
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=FF8800&center=falso&vCenter=falso&lines=%F0%9F%A7%A0+Vemonbot+%C3%A9+RenanBOT.amine+%F0%9F%A5%89;%F0%9F%A4%96+Bot+Oficial+Ativado+%E2%9A%99%EF%B8%8F;%F0%9F%94%A5+Feito+com+Intelig%C3%AAncia+%F0%9F%94%A5">      
 
 <h1 align="center">
 <p>
-<img src= "https://xatimg.com/image/hmvsfHIhqL9r.jpg" alt="𝐓𝐄𝐃 𝐁𝐎𝐓 𝐕4.5" width="720">
+<img src= "https://t1.pixhost.to/thumbs/11485/682603157_whatsapp_image.jpg" alt="Vemon 𝐁𝐎𝐓 𝐕4" width="720">
 </p>
 
 <p align="center">
@@ -41,4 +41,4 @@ cd /storage/emulated/0/Download/TED-BOT-V4.5 && npm start
 npm start
 ```
 
-<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=00008b&center=falso&vCenter=falso&lines=╰•★𝐓𝐄𝐃-𝐁𝐎𝐓-𝐕4.5★•╯"> 
+<img src="https://readme-typing-svg.herokuapp.com/?font=mono&size=30&duration=4000&color=FF8800&center=falso&vCenter=falso&lines=%F0%9F%A7%A0+Vemonbot+%C3%A9+RenanBOT.amine+%F0%9F%A5%89;%F0%9F%A4%96+Bot+Oficial+Ativado+%E2%9A%99%EF%B8%8F;%F0%9F%94%A5+Feito+com+Intelig%C3%AAncia+%F0%9F%94%A5"> 
